@@ -58,6 +58,7 @@ html {
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      border-radius: 15px;
       #play {
         width: 50px;
       }
@@ -71,6 +72,8 @@ html {
       justify-content: center;
       cursor: pointer;
       padding: 10px;
+      border-radius: 15px;
+      margin-top: 10px;
     }
   }
 }
