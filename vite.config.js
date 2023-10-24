@@ -17,7 +17,7 @@ export default defineConfig({
     copy({
       targets: [
         { src: "audio", dest: "dist/audio" }, // Copier le répertoire "audio" dans "dist/audio"
-        { src: "images", dest: "dist/images" }, // Copier le répertoire "images" dans "dist/images"
+        { src: "images", dest: "dist" }, // Copier le répertoire "images" dans "dist/images"
       ],
       hook: "writeBundle",
     }),
