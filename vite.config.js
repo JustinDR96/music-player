@@ -16,7 +16,7 @@ export default defineConfig({
     // Plugin pour copier les répertoires "audio" et "images" dans le répertoire de sortie
     copy({
       targets: [
-        { src: "audio", dest: "dist/audio" }, // Copier le répertoire "audio" dans "dist/audio"
+        { src: "audio", dest: "dist" }, // Copier le répertoire "audio" dans "dist/audio"
         { src: "images", dest: "dist" }, // Copier le répertoire "images" dans "dist/images"
       ],
       hook: "writeBundle",
