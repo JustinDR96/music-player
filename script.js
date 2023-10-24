@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentTrackIndex =
       (currentTrackIndex - 1 + audioTracks.length) % audioTracks.length;
     updateTrackInfo();
+    updateImage(); // Mettre à jour l'image
     audio.load();
     if (isPlaying) {
       audio.play();
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nextButton.addEventListener("click", () => {
     currentTrackIndex = (currentTrackIndex + 1) % audioTracks.length;
     updateTrackInfo();
+    updateImage(); // Mettre à jour l'image
     audio.load();
     if (isPlaying) {
       audio.play();
@@ -108,4 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTrackInfo();
     audio.load();
   });
+  // Fonction pour mettre à jour l'image en fonction de la piste audio
+  function updateImage() {
+    const imageElement = document.getElementById("image");
+    imageElement.style.backgroundImage = `url(${audioTracks[currentTrackIndex].image})`;
+  }
 });
