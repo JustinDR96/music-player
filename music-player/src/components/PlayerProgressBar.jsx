@@ -12,7 +12,6 @@ const PlayerProgressBar = () => {
     <div className="progress-bar">
       <input
         type="range"
-        min="0"
         max="100"
         value="0"
         onChange={handleProgressBarChange}

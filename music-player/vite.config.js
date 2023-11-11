@@ -5,9 +5,7 @@ export default {
   base: "/music-player/",
   css: {
     preprocessorOptions: {
-      scss: {
-        additionalData: '@import "@/styles/variables.scss";',
-      },
+      scss: {},
     },
   },
 };

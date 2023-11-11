@@ -1,0 +1,32 @@
+[
+  {
+    "artist": "Jewel Usain",
+    "title": "J'arrive",
+    "source": "../src/assets/audio/Jarrive.mp3",
+    "image": "../src/assets/jewel-usain.jpg"
+  },
+  {
+    "artist": "Angèle [IA]",
+    "title": "Saiyan",
+    "source": "../src/assets/audio/Saiyan.m4a",
+    "image": "../src/assets/angele-saiyan.jpg"
+  },
+  {
+    "artist": "Bad Bunny",
+    "title": "Monaco",
+    "source": "../src/assets/audio/Monaco.m4a",
+    "image": "../src/assets/bad-bunny-monaco.jpg"
+  },
+  {
+    "artist": "Bad Bunny",
+    "title": "Dakiti",
+    "source": "../src/assets/audio/Dakiti.m4a",
+    "image": "../src/assets/bad-bunny-dakiti.jpg"
+  },
+  {
+    "artist": "Freeze Corleone",
+    "title": "Fraude",
+    "source": "../src/assets/audio/Fraude.m4a",
+    "image": "../src/assets/freeze-fraude.jpg"
+  }
+]
