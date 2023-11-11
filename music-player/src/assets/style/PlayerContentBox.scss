@@ -1,0 +1,25 @@
+.content-box {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    position: relative;
+    top: 25px;
+    .artist {
+      position: relative;
+      bottom: 50px;
+      font-size: 18px;
+      color: rgb(252, 166, 252);
+    }
+    .title {
+      font-size: 22px;
+      color: white;
+    }
+  }
+}
