@@ -1,14 +1,15 @@
-// PlayerButtons.jsx
-import audioData from "../data/audioData";
 import React, { useState, useRef } from "react";
-const PlayerButtons = ({ onNextClick, onPlay }) => {
-  // Événement pour le bouton lecture
+import audioData from "../data/audioData";
 
+const PlayerButtons = ({
+  onPlay,
+  onUpdateCurrentTrackIndex,
+  currentTrackIndex,
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio());
   const [playVisible, setPlayVisible] = useState(true);
   const [pauseVisible, setPauseVisible] = useState(false);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
 
   const handlePlay = () => {
     if (!isPlaying) {
@@ -31,33 +32,27 @@ const PlayerButtons = ({ onNextClick, onPlay }) => {
     }
   };
 
-  const handlePrevious = () => {
-    // Logique pour passer à la piste precedente
-    const previousIndex = (currentTrackIndex - 1) % audioData.length;
-    setCurrentTrackIndex(previousIndex);
-
-    console.log("Next Track:", audioData[previousIndex].title);
-    console.log("Source:", audioData[previousIndex].source);
+  const changeTrack = (index) => {
+    onUpdateCurrentTrackIndex(index); // Appel de la fonction de rappel pour mettre à jour PlayerContentBox
+    console.log("Current Track:", audioData[index].title);
+    console.log("Source:", audioData[index].source);
 
     // Charger et jouer la nouvelle piste
-    audioRef.current.src = audioData[previousIndex].source;
+    audioRef.current.src = audioData[index].source;
     audioRef.current.load();
     audioRef.current.play();
     setIsPlaying(true);
   };
+
+  const handlePrevious = () => {
+    const previousIndex =
+      (currentTrackIndex - 1 + audioData.length) % audioData.length;
+    changeTrack(previousIndex);
+  };
+
   const handleNext = () => {
-    // Logique pour passer à la piste suivante
     const nextIndex = (currentTrackIndex + 1) % audioData.length;
-    setCurrentTrackIndex(nextIndex);
-
-    console.log("Next Track:", audioData[nextIndex].title);
-    console.log("Source:", audioData[nextIndex].source);
-
-    // Charger et jouer la nouvelle piste
-    audioRef.current.src = audioData[nextIndex].source;
-    audioRef.current.load();
-    audioRef.current.play();
-    setIsPlaying(true);
+    changeTrack(nextIndex);
   };
 
   return (
@@ -65,19 +60,20 @@ const PlayerButtons = ({ onNextClick, onPlay }) => {
       <button className="prev-next" id="prev" onClick={handlePrevious}>
         <img src="/src/assets/previous.png" alt="Previous" id="previous" />
       </button>
-      <button className="play-pause">
+      <button
+        className="play-pause"
+        onClick={isPlaying ? handlePause : handlePlay}
+      >
         <img
           src="/src/assets/play.png"
           alt="Play"
           id="play"
-          onClick={handlePlay}
           style={{ display: playVisible ? "inline-block" : "none" }}
         />
         <img
           src="/src/assets/pause.png"
           alt="Pause"
           id="pause"
-          onClick={handlePause}
           style={{ display: pauseVisible ? "inline-block" : "none" }}
         />
       </button>

@@ -1,11 +1,15 @@
+/* eslint-disable react/prop-types */
 // PlayerImage.jsx
-
 import React from "react";
 
-const PlayerImage = () => {
+const PlayerImage = ({ track, currentTrackIndex }) => {
+  const imageUrl = track ? `/assets/${track.image}` : null;
+
   return (
-    <div className="image" id="image">
-      <img src="/src/assets/jewel-usain.jpg" />
+    <div className="image">
+      {imageUrl && (
+        <img src={imageUrl} alt={`Track ${currentTrackIndex + 1}`} />
+      )}
     </div>
   );
 };

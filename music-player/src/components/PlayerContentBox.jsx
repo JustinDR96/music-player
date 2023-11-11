@@ -1,7 +1,7 @@
-// PlayerContentBox.jsx
 import React, { useState, useRef, useEffect } from "react";
 import PlayerProgressBar from "./PlayerProgressBar";
 import PlayerButtons from "./PlayerButtons";
+import PlayerImage from "./PlayerImage";
 import audioData from "../data/audioData";
 
 const PlayerContentBox = () => {
@@ -26,15 +26,19 @@ const PlayerContentBox = () => {
     }
   };
 
-  useEffect(() => {
-    const updateTrackInfo = () => {
-      const track = audioData[currentTrackIndex];
-      setTrackInfo({
-        title: track.title,
-        artist: track.artist,
-      });
-    };
+  const updateTrackInfo = () => {
+    const track = audioData[currentTrackIndex];
+    setTrackInfo({
+      title: track.title,
+      artist: track.artist,
+    });
+  };
 
+  useEffect(() => {
+    audioRef.current = new Audio();
+  }, [currentTrackIndex]);
+
+  useEffect(() => {
     updateTrackInfo();
   }, [currentTrackIndex]);
 
@@ -42,9 +46,14 @@ const PlayerContentBox = () => {
     title: audioData[currentTrackIndex].title,
     artist: audioData[currentTrackIndex].artist,
   });
-
+  const currentTrack = audioData[currentTrackIndex];
   return (
     <div className="content-box">
+      <PlayerImage
+        track={currentTrack}
+        onUpdateCurrentTrackIndex={setCurrentTrackIndex}
+        currentTrackIndex={currentTrackIndex}
+      />
       <div className="details">
         <h5 className="title" id="title">
           {trackInfo.title}
@@ -54,7 +63,12 @@ const PlayerContentBox = () => {
         </h3>
       </div>
       <PlayerProgressBar />
-      <PlayerButtons onNextClick={handleNextClick} onPlay={handlePlay} />
+      <PlayerButtons
+        onNextClick={handleNextClick}
+        onPlay={handlePlay}
+        onUpdateCurrentTrackIndex={setCurrentTrackIndex}
+        currentTrackIndex={currentTrackIndex}
+      />
     </div>
   );
 };
