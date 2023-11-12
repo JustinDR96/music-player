@@ -70,7 +70,7 @@ const PlayerButtons = ({
     <div className="button">
       <button className="prev-next" id="prev" onClick={handlePrevious}>
         <img
-          src="/src/assets/images/previous.png"
+          src="./src/assets/images/previous.png"
           alt="Previous"
           id="previous"
         />
@@ -80,20 +80,20 @@ const PlayerButtons = ({
         onClick={isPlaying ? handlePause : handlePlay}
       >
         <img
-          src="/src/assets/images/play.png"
+          src="./src/assets/images/play.png"
           alt="Play"
           id="play"
           style={{ display: playVisible ? "inline-block" : "none" }}
         />
         <img
-          src="/src/assets/images/pause.png"
+          src="./src/assets/images/pause.png"
           alt="Pause"
           id="pause"
           style={{ display: pauseVisible ? "inline-block" : "none" }}
         />
       </button>
       <button className="prev-next" id="next" onClick={handleNext}>
-        <img src="/src/assets/images/next.png" alt="Next" id="next-btn" />
+        <img src="./src/assets/images/next.png" alt="Next" id="next-btn" />
       </button>
     </div>
   );

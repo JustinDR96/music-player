@@ -1,11 +1,18 @@
-import ReactRefresh from "@vitejs/plugin-react-refresh";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
-export default {
-  plugins: [ReactRefresh()],
+// https://vitejs.dev/config/
+export default defineConfig({
   base: "/music-player/",
-  css: {
-    preprocessorOptions: {
-      scss: {},
-    },
-  },
-};
+  plugins: [
+    react(),
+    viteStaticCopy({
+      targets: [
+        { src: "src/assets/audio", dest: "assets/" },
+        { src: "src/assets/images", dest: "assets/" },
+      ],
+      flatten: false,
+    }),
+  ],
+});

@@ -6,7 +6,7 @@ import PlayerImage from "./PlayerImage";
 import audioData from "../data/audioData";
 
 const PlayerContentBox = () => {
-  const audioRef = useRef(new Audio());
+  const audioRef = useRef(new Audio(""));
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
