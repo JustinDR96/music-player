@@ -2,31 +2,31 @@
   {
     "artist": "Jewel Usain",
     "title": "J'arrive",
-    "source": "../src/assets/audio/Jarrive.mp3",
-    "image": "../src/assets/images/jewel-usain.jpg"
+    "source": "/audio/Jarrive.mp3",
+    "image": "../public/images/jewel-usain.jpg"
   },
   {
     "artist": "Angèle [IA]",
     "title": "Saiyan",
-    "source": "../src/assets/audio/Saiyan.m4a",
-    "image": "../src/assets/images/angele-saiyan.jpg"
+    "source": "/audio/Saiyan.m4a",
+    "image": "../public/images/angele-saiyan.jpg"
   },
   {
     "artist": "Bad Bunny",
     "title": "Monaco",
-    "source": "../src/assets/audio/Monaco.m4a",
-    "image": "../src/assets/images/bad-bunny-monaco.jpg"
+    "source": "/audio/Monaco.m4a",
+    "image": "../public/images/bad-bunny-monaco.jpg"
   },
   {
     "artist": "Bad Bunny",
     "title": "Dakiti",
-    "source": "../src/assets/audio/Dakiti.m4a",
-    "image": "../src/assets/images/bad-bunny-dakiti.jpg"
+    "source": "/audio/Dakiti.m4a",
+    "image": "../public/images/bad-bunny-dakiti.jpg"
   },
   {
     "artist": "Freeze Corleone",
     "title": "Fraude",
-    "source": "../src/assets/audio/Fraude.m4a",
-    "image": "../src/assets/images/freeze-fraude.jpg"
+    "source": "/audio/Fraude.m4a",
+    "image": "../public/images/freeze-fraude.jpg"
   }
 ]

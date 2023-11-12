@@ -15,4 +15,7 @@ export default defineConfig({
       flatten: false,
     }),
   ],
+  resolve: {
+    extensions: [".jsx", ".json", ".scss", ".vue"], // Ajoutez ou ajustez selon vos besoins
+  },
 });

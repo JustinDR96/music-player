@@ -3,7 +3,7 @@
 import React from "react";
 
 const PlayerImage = ({ track, currentTrackIndex }) => {
-  const imageUrl = track ? `/assets/${track.image}` : null;
+  const imageUrl = track ? `/images/${track.image}` : null;
 
   return (
     <div className="image">
