@@ -1,25 +1,22 @@
 .content-box {
-  width: 190px;
+  width: 250px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10px;
+  justify-content: center;
   .details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-transform: capitalize;
-    position: relative;
-    top: 25px;
+    text-align: center;
+    .title {
+      color: white;
+    }
     .artist {
       position: relative;
-      bottom: 50px;
-      font-size: 18px;
+      bottom: 20px;
       color: rgb(252, 166, 252);
-    }
-    .title {
-      font-size: 22px;
-      color: white;
     }
   }
 }
+
+

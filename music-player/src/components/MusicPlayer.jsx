@@ -13,7 +13,6 @@ import "/src/assets/style/PlayerProgressBar.scss";
 const MusicPlayer = () => {
   return (
     <main className="container">
-      <PlayerImage />
       <PlayerContentBox />
     </main>
   );
