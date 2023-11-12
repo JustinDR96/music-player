@@ -2,26 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Player</title>
+    <title>Music Player React</title>
   </head>
   <body>
-    <main class="container">
-      <div class="image" id="image"></div>
-      <div class="content-box">
-        <h3 class="artist" id="artist">Jewel Usain</h3>
-        <h5 class="title" id="title">j'arrive</h5>
-        <div class="progress-bar">
-          <input type="range" min="0" max="100" value="0" />
-        </div>
-        <button class="play-pause">
-          <img src="images/play.png" id="play" />
-          <img src="images/pause.png" alt="" id="pause" />
-        </button>
-        <button class="prev-next" id="prev">Précédent</button>
-        <button class="prev-next" id="next">Suivant</button>
-      </div>
-    </main>
-    <script type="module" src="./main.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
