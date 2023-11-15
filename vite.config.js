@@ -1,21 +1,15 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
+// [FIXME] fix import path in destination assets
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/music-player/",
-  plugins: [
-    react(),
-    viteStaticCopy({
-      targets: [
-        { src: "src/assets/audio", dest: "assets/" },
-        { src: "src/assets/images", dest: "assets/" },
-      ],
-      flatten: false,
-    }),
-  ],
+  plugins: [react()],
   resolve: {
-    extensions: [".jsx", ".json", ".scss", ".vue"], // Ajoutez ou ajustez selon vos besoins
+    extensions: [".jsx", ".json", ".scss", ".vue"],
+  },
+  server: {
+    port: 3000,
   },
 });
