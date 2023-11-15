@@ -7,8 +7,12 @@ export default defineConfig({
   base: "/music-player/",
   plugins: [react()],
   build: {
-    outDir: 'distS',
-},
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name].[ext]",
+      },
+    },
+  },
   resolve: {
     extensions: [".jsx", ".json", ".scss", ".vue"],
   },

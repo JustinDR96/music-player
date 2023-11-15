@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const PlayerImage = ({ track, currentTrackIndex }) => {
   const imageUrl = track ? `${track.image}` : null;
   return (

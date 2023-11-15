@@ -1,5 +1,3 @@
-// MusicPlayer.jsx
-
 import React from "react";
 import PlayerImage from "./PlayerImage.jsx";
 import PlayerContentBox from "./PlayerContentBox.jsx";

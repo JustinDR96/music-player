@@ -2,8 +2,8 @@
   {
     "artist": "Jewel Usain",
     "title": "J'arrive",
-    "source": "/audio/Jarrive.mp3",
-    "image": "/images/jewel-usain.jpg"
+    "source": "./audio/Jarrive.mp3",
+    "image": "./images/jewel-usain.jpg"
   },
   {
     "artist": "Angèle [IA]",
