@@ -6,7 +6,13 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: "/music-player/",
   plugins: [react()],
+  build: {
+    outDir: 'distS',
+},
   resolve: {
     extensions: [".jsx", ".json", ".scss", ".vue"],
+  },
+  server: {
+    port: 3000,
   },
 });
