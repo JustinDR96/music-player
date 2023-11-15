@@ -1,7 +1,8 @@
 // App.js
+// [FIXME] resoudre eslint error V
+// enlever les comment pas necessaire V
 
-import React from "react";
-import MusicPlayer from "./components/MusicPlayer.jsx"; // Assurez-vous de mettre à jour le chemin en fonction de votre structure de fichiers
+import MusicPlayer from "./components/MusicPlayer.jsx";
 
 const App = () => {
   return (

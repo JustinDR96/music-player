@@ -13,10 +13,8 @@ const PlayerContentBox = () => {
   const [duration, setDuration] = useState(0);
 
   useEffect(() => {
-    // Charger la première piste lors du chargement initial
     loadTrack(currentTrackIndex);
 
-    // Nettoyer les écouteurs d'événements lors du démontage du composant
     return () => {
       audioRef.current.removeEventListener("timeupdate", updateTime);
       audioRef.current.removeEventListener("loadedmetadata", updateTime);
@@ -24,7 +22,6 @@ const PlayerContentBox = () => {
   }, [currentTrackIndex]);
 
   useEffect(() => {
-    // Mettre à jour les informations de piste lorsqu'une nouvelle piste est chargée
     updateTrackInfo();
   }, [currentTrackIndex]);
 
@@ -32,7 +29,6 @@ const PlayerContentBox = () => {
     audioRef.current.src = audioData[index].source;
     audioRef.current.load();
 
-    // L'événement "loadedmetadata" est utilisé pour garantir que la durée est disponible
     audioRef.current.addEventListener("loadedmetadata", () => {
       setDuration(audioRef.current.duration);
     });
@@ -70,12 +66,8 @@ const PlayerContentBox = () => {
     artist: audioData[currentTrackIndex].artist,
   });
   const handleUpdateProgressBar = () => {
-    // Vérifiez que audioRef.current est défini
     if (audioRef.current) {
-      // Obtenez la position actuelle depuis le lecteur audio
       const currentTime = audioRef.current.currentTime;
-
-      // Mettez à jour l'état de la barre de progression
       setCurrentTime(currentTime);
       console.log("Updated progress bar. Current time:", currentTime);
     }

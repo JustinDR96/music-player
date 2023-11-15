@@ -34,11 +34,10 @@ const PlayerButtons = ({
   };
 
   const changeTrack = (index) => {
-    onUpdateCurrentTrackIndex(index); // Appel de la fonction de rappel pour mettre à jour PlayerContentBox
+    onUpdateCurrentTrackIndex(index);
     console.log("Current Track:", audioData[index].title);
     console.log("Source:", audioData[index].source);
 
-    // Charger et jouer la nouvelle piste
     audioRef.current.src = audioData[index].source;
     audioRef.current.load();
     audioRef.current.play();
