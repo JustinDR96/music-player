@@ -34,11 +34,10 @@ const PlayerButtons = ({
   };
 
   const changeTrack = (index) => {
-    onUpdateCurrentTrackIndex(index); // Appel de la fonction de rappel pour mettre à jour PlayerContentBox
+    onUpdateCurrentTrackIndex(index);
     console.log("Current Track:", audioData[index].title);
     console.log("Source:", audioData[index].source);
 
-    // Charger et jouer la nouvelle piste
     audioRef.current.src = audioData[index].source;
     audioRef.current.load();
     audioRef.current.play();
@@ -69,27 +68,27 @@ const PlayerButtons = ({
   return (
     <div className="button">
       <button className="prev-next" id="prev" onClick={handlePrevious}>
-        <img src="/images/previous.png" alt="Previous" id="previous" />
+        <img src="./images/previous.png" alt="Previous" id="previous" />
       </button>
       <button
         className="play-pause"
         onClick={isPlaying ? handlePause : handlePlay}
       >
         <img
-          src="/images/play.png"
+          src="./images/play.png"
           alt="Play"
           id="play"
           style={{ display: playVisible ? "inline-block" : "none" }}
         />
         <img
-          src="/images/pause.png"
+          src="./images/pause.png"
           alt="Pause"
           id="pause"
           style={{ display: pauseVisible ? "inline-block" : "none" }}
         />
       </button>
       <button className="prev-next" id="next" onClick={handleNext}>
-        <img src="/images/next.png" alt="Next" id="next-btn" />
+        <img src="./images/next.png" alt="Next" id="next-btn" />
       </button>
     </div>
   );

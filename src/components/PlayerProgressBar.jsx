@@ -20,7 +20,6 @@ const PlayerProgressBar = ({ audioRef, isPlaying }) => {
   }, [audioRef]);
 
   useEffect(() => {
-    // Mettez à jour la barre de progression si la musique est en cours de lecture
     if (isPlaying) {
       const progressBar = document.getElementById("progress-bar");
       if (progressBar) {
@@ -38,7 +37,7 @@ const PlayerProgressBar = ({ audioRef, isPlaying }) => {
         min="0"
         max="100"
         value={(currentTime / duration) * 100 || 0}
-        readOnly // Utilisez readOnly pour éviter le warning lié à la propriété value
+        readOnly 
       />
     </div>
   );
