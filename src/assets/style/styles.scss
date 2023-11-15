@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
+// main.scss
+@import "MusicPlayer.scss";
+@import "PlayerButtons.scss";
+@import "PlayerContentBox.scss";
+@import "PlayerImage.scss";
+@import "PlayerProgressBar.scss";
 body,
 html {
   font-family: "Roboto", sans-serif;

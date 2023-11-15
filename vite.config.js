@@ -6,13 +6,6 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: "/music-player/",
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: "assets/[name].[ext]",
-      },
-    },
-  },
   resolve: {
     extensions: [".jsx", ".json", ".scss", ".vue"],
   },
